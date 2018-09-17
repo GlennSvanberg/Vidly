@@ -222,6 +222,18 @@
     <Compile Include="Migrations\201809172020165_ApplyAnnotationsToCustomerId.Designer.cs">
       <DependentUpon>201809172020165_ApplyAnnotationsToCustomerId.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201809172033128_AddNameToMembershipType.cs" />
+    <Compile Include="Migrations\201809172033128_AddNameToMembershipType.Designer.cs">
+      <DependentUpon>201809172033128_AddNameToMembershipType.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809172033470_AddNamesInDatabaseToMembershipTypes.cs" />
+    <Compile Include="Migrations\201809172033470_AddNamesInDatabaseToMembershipTypes.Designer.cs">
+      <DependentUpon>201809172033470_AddNamesInDatabaseToMembershipTypes.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201809172039254_AddBirthDateToCustomer.cs" />
+    <Compile Include="Migrations\201809172039254_AddBirthDateToCustomer.Designer.cs">
+      <DependentUpon>201809172039254_AddBirthDateToCustomer.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\Customer.cs" />
@@ -329,6 +341,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201809172020165_ApplyAnnotationsToCustomerId.resx">
       <DependentUpon>201809172020165_ApplyAnnotationsToCustomerId.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809172033128_AddNameToMembershipType.resx">
+      <DependentUpon>201809172033128_AddNameToMembershipType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809172033470_AddNamesInDatabaseToMembershipTypes.resx">
+      <DependentUpon>201809172033470_AddNamesInDatabaseToMembershipTypes.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201809172039254_AddBirthDateToCustomer.resx">
+      <DependentUpon>201809172039254_AddBirthDateToCustomer.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
