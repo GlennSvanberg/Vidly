@@ -20,6 +20,12 @@ namespace Vidly.Controllers
         {
             _context.Dispose();
         }
+        public ActionResult New()
+        {
+            var membershipTypes = _context.Membershiptypes.ToList();
+
+            return View();
+        }  
 
         public ActionResult Index()
         {
