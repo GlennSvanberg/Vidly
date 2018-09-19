@@ -11,8 +11,8 @@ namespace Vidly.Controllers
 {
     public class MoviesController : Controller
     {
-
-        private ApplicationDbContext _context;
+        
+    private ApplicationDbContext _context;
 
         public MoviesController()
         {
@@ -23,8 +23,20 @@ namespace Vidly.Controllers
             _context.Dispose();
         }
         [HttpPost]
+        [ValidateAntiForgeryToken]
         public ActionResult Save(Movie movie)
         {
+            if (!ModelState.IsValid)
+            {
+                var viewModel = new MovieFormViewModel(movie)
+                {
+
+                    Genres = _context.Genres.ToList()
+                };
+
+                return View("MovieForm", viewModel);
+            }
+
 
             if (movie.Id == 0)
             {
@@ -70,9 +82,9 @@ namespace Vidly.Controllers
 
             if (movie == null)
                 return HttpNotFound();
-            var viewModel = new MovieFormViewModel
+            var viewModel = new MovieFormViewModel(movie)
             {
-                Movie = movie,
+               
                 Genres = _context.Genres.ToList()
             };
     
@@ -84,6 +96,7 @@ namespace Vidly.Controllers
             var genres = _context.Genres.ToList();
             var viewModel = new MovieFormViewModel
             {
+                //Movie = new Movie(),
                 Genres = genres
             };
             return View("MovieForm", viewModel);
